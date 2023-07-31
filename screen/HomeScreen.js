@@ -34,7 +34,7 @@ import {
 import { getdata } from "../InteractServer/GetUserSqlite";
 import { Entypo } from "@expo/vector-icons";
 import ReadingHistory from "../components/Popup/ReadingHistory";
-import { server } from "../variable/ServerName";
+const server = "http://13.250.45.19:3000";
 
 //màn hình HomeScreen
 export default function HomeScreen({ navigation }) {

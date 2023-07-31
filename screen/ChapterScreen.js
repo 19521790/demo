@@ -14,7 +14,6 @@ import {
 } from "react-native";
 import { Color } from "../variable/Color";
 
-import { server } from "../variable/ServerName";
 import Linear from "../components/ChapterScreen/Linear";
 import SliderScroll from "../components/ChapterScreen/SliderScroll";
 import NavigateButton from "../components/ChapterScreen/NavigateButton";
@@ -27,7 +26,7 @@ const windowWidth = Dimensions.get("window").width;
 const windowHeight = Dimensions.get("window").height;
 const top = windowHeight / 3;
 const bottom = (windowHeight / 3) * 2;
-
+const server = "http://13.250.45.19:3000";
 export default function ChapterScreen({ route, navigation }) {
   const {
     chapterId,
