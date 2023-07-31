@@ -19,7 +19,7 @@ import CategoryFlatlist from "../components/HomeScreen/CategoryFlatlist";
 import ListFlatlist from "../components/HomeScreen/ListFlatlist";
 import { useEffect } from "react";
 import axios from "axios";
-import { server } from "../variable/ServerName";
+
 import BannerHome from "../components/HomeScreen/BannerHome";
 import ResumeTag from "../components/MangaList/ResumeTag";
 import { useSelector, useDispatch } from "react-redux";
@@ -34,6 +34,8 @@ import {
 import { getdata } from "../InteractServer/GetUserSqlite";
 import { Entypo } from "@expo/vector-icons";
 import ReadingHistory from "../components/Popup/ReadingHistory";
+import { server } from "../variable/ServerName";
+
 //màn hình HomeScreen
 export default function HomeScreen({ navigation }) {
   const opacity_head = useRef(new Animated.Value(0)).current;
@@ -132,9 +134,9 @@ export default function HomeScreen({ navigation }) {
                 <View style={{ flexDirection: "row", alignItems: "center" }}>
                   <Text style={Font.baseTitle}>See All</Text>
                   <Entypo
-                    name='chevron-right'
+                    name="chevron-right"
                     size={18}
-                    color='white'
+                    color="white"
                     style={{ marginTop: 2 }}
                   />
                 </View>
@@ -148,14 +150,14 @@ export default function HomeScreen({ navigation }) {
           <Text style={[Font.homeTitle, { padding: 15, marginTop: 15 }]}>
             New Titles For You
           </Text>
-          <ListFlatlist navigation={navigation} type='new_title' />
+          <ListFlatlist navigation={navigation} type="new_title" />
         </View>
         {/* Top pick for you */}
         <View style={styles.action_list}>
           <Text style={[Font.homeTitle, { padding: 15 }]}>
             Top Picks For You
           </Text>
-          <ListFlatlist navigation={navigation} type='top_pick' />
+          <ListFlatlist navigation={navigation} type="top_pick" />
         </View>
         {data.map((item, index) => {
           return (
@@ -166,7 +168,7 @@ export default function HomeScreen({ navigation }) {
               <CategoryFlatlist
                 navigation={navigation}
                 type={item.Name}
-                other=''
+                other=""
               />
             </View>
           );
@@ -180,7 +182,7 @@ export default function HomeScreen({ navigation }) {
               <CategoryFlatlist
                 navigation={navigation}
                 type={item.Name}
-                other='trending'
+                other="trending"
               />
             </View>
           );
